@@ -1,0 +1,47 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+*.tgz
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+# Environment
+venv
+
+### VS Code ###
+.vscode/
+
+.DS_STORE
+.DS_Store
+
+__pycache__/
+
+#R related
+.Rproj.user
+.Rhistory
+/.helm/configs/
+common_deploy.sh
+docker_release.sh
