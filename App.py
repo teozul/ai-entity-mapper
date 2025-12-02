@@ -31,11 +31,17 @@ ai_client = OpenAILikeClient(
 )
 
 
+def get_birth_year(dob):
+    if isinstance(dob, str):
+        return dob[:4]
+    return dob.year
+
+
 def invoke_ai(unmapped_player: dict, master_players: list[dict]) -> dict:
     if "dateOfBirth" in unmapped_player:
-        birth_year = unmapped_player["dateOfBirth"].year
+        birth_year = get_birth_year(unmapped_player["dateOfBirth"])
         filtered_master_players = [p for p in master_players if
-                                   "dateOfBirth" not in p or p["dateOfBirth"].year == birth_year]
+                                   "dateOfBirth" not in p or get_birth_year(p["dateOfBirth"]) == birth_year]
     else:
         filtered_master_players = master_players
 
