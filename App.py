@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 from pymongo import MongoClient
 
 external_provider_to_field = {
-    "SPORTMONKS_BET365": "sportmonksPlayerId",
     "OPTA": "optaPlayerId",
     "SPORTMONKS": "sportmonksPlayerId",
     "WYSCOUT": "wyscoutPlayerId"
